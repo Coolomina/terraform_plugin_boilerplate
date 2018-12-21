@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  dev:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - ./:/go/src/github.com/Coolomina/terraform_plugin_boilerplate
+    entrypoint: /bin/sh
+
+  deps:
+    build:
+      context: .
+      target: deps
+    volumes:
+      - ./:/go/src/github.com/Coolomina/terraform_plugin_boilerplate
