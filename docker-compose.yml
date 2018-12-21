@@ -6,7 +6,7 @@ services:
       target: dev
     volumes:
       - ./:/go/src/github.com/Coolomina/terraform_plugin_boilerplate
-    entrypoint: /bin/sh
+    command: tail -f /dev/null
 
   deps:
     build:
